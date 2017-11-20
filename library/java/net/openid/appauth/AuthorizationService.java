@@ -316,7 +316,7 @@ public class AuthorizationService {
                 clientAuthentication,
                 mClientConfiguration.getConnectionBuilder(),
                 callback)
-                .execute();
+                .executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
 
     /**
